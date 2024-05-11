@@ -11,7 +11,7 @@ public class EchoServer{
             // Keep the server running indefinitely
             while (true) {
                 Socket soc = ss.accept();
-                System.out.println("Connection established with " + soc.getInetAddress());
+                // System.out.println("Connection established with " + soc.getInetAddress());
 
                 // Handle the client request in a separate thread to allow concurrent connections
                 new Thread(new ClientHandler(soc)).start();
@@ -35,11 +35,13 @@ class ClientHandler implements Runnable {
             // receive a message from the client
             BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             String str = in.readLine();
-            System.out.println("Message from client: " + str);
+            // System.out.println("Message from client: " + str);
+            System.out.println("received: "+str);
 
             // Enter the response to send to client
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Enter response: ");
+            // System.out.println("Enter response: ");
+			System.out.print("Send: ");
             String response = userInput.readLine();
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
             out.println(response);
