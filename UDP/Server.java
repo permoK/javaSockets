@@ -3,7 +3,7 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.io.*;
 
-public class EchoServer {
+public class Server {
     public static void main(String[] args) {
         try {
             DatagramSocket socket = new DatagramSocket(1212);

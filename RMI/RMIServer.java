@@ -7,7 +7,7 @@ public class RMIServer {
         try {
             // Create and export the remote object
             RemoteImpl obj = new RemoteImpl();
-            Registry registry = LocateRegistry.createRegistry(1099); // Default port for RMI registry
+            Registry registry = LocateRegistry.createRegistry(1313); // Default port for RMI registry
             registry.rebind("RemoteObject", obj); // Bind the remote object to the registry
             
             System.out.println("Server is ready...");

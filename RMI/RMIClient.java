@@ -6,7 +6,8 @@ public class RMIClient {
     public static void main(String[] args) {
         try {
             // Obtain a reference to the remote object from the registry
-            Registry registry = LocateRegistry.getRegistry("localhost", 1099); // Default port for RMI registry
+            // Registry registry = LocateRegistry.getRegistry("54.237.50.146", 1212); // Default port for RMI registry
+            Registry registry = LocateRegistry.getRegistry("localhost", 1313); // Default port for RMI registry
             RemoteInterface obj = (RemoteInterface) registry.lookup("RemoteObject");
             
             // Invoke the remote method
