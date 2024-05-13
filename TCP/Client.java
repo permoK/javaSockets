@@ -1,12 +1,12 @@
 import java.net.Socket;
 import java.io.*;
 
-public class EchoClient {
+public class Client {
     public static void main(String[] args) {
         try {
             // Loop to continuously send and receive messages
             while (true) {
-            // System.out.println("Client started");
+            System.out.println("Client restarted/started");
             // Socket soc = new Socket("54.237.50.146",3306);
             Socket soc = new Socket("localhost", 1212);
 

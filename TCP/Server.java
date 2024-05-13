@@ -2,7 +2,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.*;
 
-public class EchoServer{
+public class Server{
     public static void main(String[] args) {
         try {
             System.out.println("Waiting for clients to connect...");
@@ -11,7 +11,7 @@ public class EchoServer{
             // Keep the server running indefinitely
             while (true) {
                 Socket soc = ss.accept();
-                // System.out.println("Connection established with " + soc.getInetAddress());
+                System.out.println("Connection established with " + soc.getInetAddress());
 
                 // Handle the client request in a separate thread to allow concurrent connections
                 new Thread(new ClientHandler(soc)).start();
